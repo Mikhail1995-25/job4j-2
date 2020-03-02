@@ -21,11 +21,11 @@ public class Merge {
         int l = 0;
         int r = 0;
         int i = 0;
-        while(i < rs1.length){
-            if(l > left.length - 1) {
+        while (i < rs1.length) {
+            if (l > left.length - 1) {
                 rs1[i] = right[r];
                 r++;
-            } else if(r > right.length -1) {
+            } else if (r > right.length - 1) {
                 rs1[i] = left[l];
                 l++;
             } else if (left[l] < right[r]) {
