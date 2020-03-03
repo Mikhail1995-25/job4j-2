@@ -23,17 +23,13 @@ public class Merge {
         int i = 0;
         while (i < rs1.length) {
             if (l > left.length - 1) {
-                rs1[i] = right[r];
-                r++;
+                rs1[i] = right[r++];
             } else if (r > right.length - 1) {
-                rs1[i] = left[l];
-                l++;
+                rs1[i] = left[l++];
             } else if (left[l] < right[r]) {
-                rs1[i] = left[l];
-                l++;
+                rs1[i] = left[l++];
             } else {
-                rs1[i] = right[r];
-                r++;
+                rs1[i] = right[r++];
             }
             i++;
         }
