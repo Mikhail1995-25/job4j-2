@@ -16,12 +16,12 @@ public class Check {
      * @return - Возвращает результат.
      */
     public static boolean mono(boolean... data) {
-        boolean result = true;
-        for (int index = 0; index < data.length - 1; index++) {
-            if (data[index] != data[index + 1]) {
+        boolean b = true;
+        for (int i = 0; i < data.length - 1; i++) {
+            if (data[i] != data[i + 1]) {
                 return false;
             }
         }
-        return result;
+        return b;
     }
 }

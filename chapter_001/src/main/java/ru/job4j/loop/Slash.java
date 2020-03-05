@@ -34,7 +34,6 @@ public class Slash {
      * Main - Вывод результата на консоль.
      * @param args - args.
      */
-
     public static void main(String[]args) {
         System.out.println("Draw by 3");
         draw(3);

@@ -1,6 +1,17 @@
 package ru.job4j;
 
+/**
+ * Multiple
+ *
+ * @author Mikhail Pushkarev
+ * @since 05.03.2020
+ * @version 0.19
+ */
 public class Multiple {
+    /**
+     * Main
+     * @param args - Вывод строк на консоль.
+     */
     public static void main(String[]args) {
         System.out.println("1*1=1");
         System.out.println("1*2=2");

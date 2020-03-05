@@ -14,13 +14,13 @@ public class Defragment {
      * @return - Возвращает отсортированный массив
      */
     public static String[] compress(String[] array) {
-        for (int index = 0; index < array.length; index++) {
-            if (array[index] == null) {
-                int point = index;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == null) {
+                int point = i;
                 while (point < array.length) {
                     if (array[point] != null) {
-                        String temp = array[index];
-                        array[index] = array[point];
+                        String temp = array[i];
+                        array[i] = array[point];
                         array[point] = temp;
                         break;
 
@@ -29,16 +29,16 @@ public class Defragment {
                 }
 
             }
-            System.out.print(array[index] + " ");
+            System.out.print(array[i] + " ");
         }
         return array;
     }
     public static void main(String[]args) {
-        String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
-        String[]compressed = compress(input);
+        String[] strings = {"I", null, "wanna", null, "be", null, "compressed"};
+        String[]compressed = compress(strings);
         System.out.println();
-        for (int index = 0; index < compressed.length; index++) {
-            System.out.print(compressed[index] + " ");
+        for (int i = 0; i < compressed.length; i++) {
+            System.out.print(compressed[i] + " ");
 
         }
     }

@@ -39,10 +39,10 @@ public class SwitchArray {
      * @param args - Выводит результат на консоль.
      */
     public static void main(String[]args) {
-        int[] nums = new int[] {1, 2, 3, 4, 5, 6};
-        int[] rs1 = swapBorder(nums);
-        for (int index = 0; index < rs1.length; index++) {
-            System.out.println(rs1[index]);
+        int[] ints = new int[] {1, 2, 3, 4, 5, 6};
+        int[] rs1 = swapBorder(ints);
+        for (int i = 0; i < rs1.length; i++) {
+            System.out.println(rs1[i]);
         }
     }
 }

@@ -14,12 +14,12 @@ public class BarleyBreak {
      */
     public static void main(String[] args) {
         int[][] arr = new int[3][3];
-        int index = 1;
+        int i1 = 1;
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
-                arr[i][j] = index;
-                index++;
+                arr[i][j] = i1;
+                i1++;
             }
         }
         for (int i = 0; i < arr.length; i++) {

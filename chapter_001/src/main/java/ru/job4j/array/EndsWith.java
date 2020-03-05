@@ -15,13 +15,13 @@ public class EndsWith {
      * @return - Возвращает сравнение заключительных символов.
      */
     public static boolean endsWith(char[] word, char[] post) {
-        boolean result = true;
-        for (int index = 0; index < post.length; index++) {
-            if (post[post.length - index - 1] != word[word.length - index - 1]) {
-                result = false;
+        boolean b = true;
+        for (int i = 0; i < post.length; i++) {
+            if (post[post.length - i - 1] != word[word.length - i - 1]) {
+                b = false;
                 break;
             }
         }
-        return result;
+        return b;
     }
 }

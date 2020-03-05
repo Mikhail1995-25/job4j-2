@@ -15,8 +15,8 @@ public class Square {
      */
     public static int[] calculate(int bound) {
         int[] rst = new int[bound];
-        for (int index = 0; index < bound; index++) {
-            rst[index] = index * index;
+        for (int i = 0; i < bound; i++) {
+            rst[i] = i * i;
         }
         return rst;
     }
@@ -27,13 +27,13 @@ public class Square {
      */
     public static void main(String[]args) {
         int[] array = calculate(4);
-        for (int index = 0; index < array.length; index++) {
-            System.out.println(array[index]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
         System.out.println();
         int[] array1 = calculate(5);
-        for (int index = 0; index < array1.length; index++) {
-            System.out.println(array1[index]);
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i]);
         }
     }
 }

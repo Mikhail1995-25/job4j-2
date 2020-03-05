@@ -16,20 +16,20 @@ public class ArrayDefinition {
      */
     public static void main(String... args) {
         short[] ages = new short[10];
-        String[] surnames = new String[100500];
-        float[] prices = new float[40];
-        String[] names = new String[4];
+        String[] strings = new String[100500];
+        float[] floats = new float[40];
+        String[] strings1 = new String[4];
 
-        names[0] = "Mikhail";
-        names[1] = "Roman";
-        names[2] = "Aleksandr";
-        names[3] = "Olga";
-        String name = names[0];
+        strings1[0] = "Mikhail";
+        strings1[1] = "Roman";
+        strings1[2] = "Aleksandr";
+        strings1[3] = "Olga";
+        String name = strings1[0];
         System.out.println(name);
-        String name1 = names[1];
+        String name1 = strings1[1];
         System.out.println(name1);
-        System.out.println(names[2]);
-        System.out.println(names[3]);
+        System.out.println(strings1[2]);
+        System.out.println(strings1[3]);
     }
 }
 

@@ -16,14 +16,14 @@ public class ArrayChar {
      * @return - Результат сравнения символов.
      */
     public static boolean startWith(char[] word, char... pref) {
-        boolean result = true;
-        for (int index = 0; index < pref.length; index++) {
-            if (pref[index] == word[index]) {
+        boolean b = true;
+        for (int i = 0; i < pref.length; i++) {
+            if (pref[i] == word[i]) {
                 continue;
             }
-            result = false;
+            b = false;
             break;
         }
-        return result;
+        return b;
     }
 }

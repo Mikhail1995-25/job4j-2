@@ -16,8 +16,8 @@ public class Calculator {
      *
      */
     public static void add(double first, double second) {
-        double result = first + second;
-        System.out.println(first + " + " + second + " = " + result);
+        double v = first + second;
+        System.out.println(first + " + " + second + " = " + v);
     }
 
     /**
@@ -27,8 +27,8 @@ public class Calculator {
      *
      */
     public static void div(double first, double second) {
-        double result = first / second;
-        System.out.println(first + " / " + second + " = " + result);
+        double v = first / second;
+        System.out.println(first + " / " + second + " = " + v);
     }
 
     /**
@@ -38,8 +38,8 @@ public class Calculator {
      *
      */
     public static void multiply(double first, double second) {
-        double result = first * second;
-        System.out.println(first + " * " + second + " = " + result);
+        double v = first * second;
+        System.out.println(first + " * " + second + " = " + v);
     }
 
     /**
@@ -49,8 +49,8 @@ public class Calculator {
      *
      */
     public static void subtrack(double first, double second) {
-        double result = first - second;
-        System.out.println(first + " - " + second + " = " + result);
+        double v = first - second;
+        System.out.println(first + " - " + second + " = " + v);
     }
 
     /**

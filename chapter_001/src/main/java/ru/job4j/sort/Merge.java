@@ -8,7 +8,6 @@ import java.util.Arrays;
  * @since 02.03.2020
  * @version 18.0
  */
-
 public class Merge {
     /**
      * Method merge

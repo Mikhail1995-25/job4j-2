@@ -13,16 +13,16 @@ public class MatrixCheck {
      * @return - Возвращает результат.
      */
     public static boolean monoHorizontal(char[][] board, int row) {
-        boolean result = true;
+        boolean b = true;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[row][j] != 'X') {
-                    result = false;
+                    b = false;
                     break;
                 }
             }
         }
-        return result;
+        return b;
     }
 
     /**
@@ -32,16 +32,16 @@ public class MatrixCheck {
      * @return - Возвращает результат выполнения метода.
      */
     public static boolean monoVertical(char[][] board, int column) {
-        boolean result = true;
+        boolean b = true;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][column] != 'X') {
-                    result = false;
+                    b = false;
                     break;
                 }
             }
         }
-        return result;
+        return b;
     }
 
     /**
@@ -51,8 +51,8 @@ public class MatrixCheck {
      */
     public static char[] extractDiagonal(char[][] board) {
         char[] rs1 = new char[board.length];
-        for (int index = 0; index < rs1.length; index++) {
-            rs1[index] = board[index][index];
+        for (int i = 0; i < rs1.length; i++) {
+            rs1[i] = board[i][i];
         }
         return rs1;
     }
@@ -64,14 +64,14 @@ public class MatrixCheck {
      * @return - Возвращает результат выполнения метода.
      */
     public static boolean isWin(char[][] board) {
-        boolean result = false;
+        boolean b = false;
         for (int i = 0; i < board.length; i++) {
                 if (monoHorizontal(board, i) || monoVertical(board, i)) {
-                    result = true;
+                    b = true;
                     break;
                 }
 
         }
-        return result;
+        return b;
     }
 }
