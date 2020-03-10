@@ -12,6 +12,5 @@ public class Pioneer {
      * @param wolf - Принимает параметр объекта класса Wolf.
      */
     public void kill(Wolf wolf) {
-
     }
 }

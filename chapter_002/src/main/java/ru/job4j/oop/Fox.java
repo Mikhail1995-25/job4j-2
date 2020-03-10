@@ -12,6 +12,5 @@ public class Fox {
      * @param hare - Принимает параметр объекта класса Hare.
      */
     public void tryEat(Hare hare) {
-
     }
 }

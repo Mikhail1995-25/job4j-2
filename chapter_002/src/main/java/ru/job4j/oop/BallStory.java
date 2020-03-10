@@ -7,6 +7,7 @@ package ru.job4j.oop;
  * @version 1.6
  */
 public class BallStory {
+
     /**
      * Main
      * @param args - Выводит на консоль историю объектов классов.

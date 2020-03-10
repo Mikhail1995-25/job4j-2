@@ -13,6 +13,5 @@ public class Ball {
      * @param wolfs - Принимает параметр обьекта класса Wolfs.
      */
     public void help(Wolfs wolfs) {
-
     }
 }

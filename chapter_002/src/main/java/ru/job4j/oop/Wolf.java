@@ -12,6 +12,5 @@ public class Wolf {
      * @param girl - Принимает параметр объекта класса Girl.
      */
     public void eat(Girl girl) {
-
     }
 }

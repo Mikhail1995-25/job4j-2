@@ -12,6 +12,5 @@ public class Girl {
      * @param pioneer - Принимает параметр объекта класса Pioneer.
      */
     public void help(Pioneer pioneer) {
-
     }
 }

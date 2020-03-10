@@ -12,6 +12,5 @@ public class Hare {
      * @param ball - Принимает параметр объекта кдасса Ball.
      */
     public void tryEat(Ball ball) {
-
     }
 }

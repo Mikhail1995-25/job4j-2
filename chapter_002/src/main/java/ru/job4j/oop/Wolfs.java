@@ -12,6 +12,5 @@ public class Wolfs {
      * @param fox - Принимает параметр объекта класса Fox.
      */
     public void tryEat(Fox fox) {
-
     }
 }

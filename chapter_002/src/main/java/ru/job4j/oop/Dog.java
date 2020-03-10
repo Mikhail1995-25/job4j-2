@@ -7,6 +7,7 @@ package ru.job4j.oop;
  * @version 0.2
  */
 public class Dog {
+
     /**
      * Main
      * @param args - Выводит результат на консоль.
