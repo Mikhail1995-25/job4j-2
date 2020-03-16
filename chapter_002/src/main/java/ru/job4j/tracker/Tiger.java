@@ -8,6 +8,7 @@ package ru.job4j.tracker;
  * @version 1
  */
 public class Tiger extends Predator {
+
     /**
      * Constructor Tiger
      * Конструктор созданный без параметров.
@@ -18,10 +19,20 @@ public class Tiger extends Predator {
     }
 
     /**
+     * Tiger
+     * @param name - Принимает параметр и выводит результат на консоль.
+     */
+    public Tiger(String name) {
+        super(name);
+        System.out.println("Tiger");
+
+    }
+
+    /**
      * Main
      * @param args - Вызываем объект родителя.
      */
     public static void main(String[] args) {
-        Animal animal = new Animal();
+       Tiger tiger = new Tiger("Tig");
     }
 }

@@ -9,6 +9,10 @@ package ru.job4j.tracker;
  */
 public class Animal {
     /**
+     * Поле инициализируемое в конструкторе.
+     */
+    private String name;
+    /**
      * Constructor Animal
      * Конструктор без параметров.
      */
@@ -18,10 +22,16 @@ public class Animal {
     }
 
     /**
-     * Main
-     * @param args - Вызываем объект дочернего класса, результат будет "load Animal".
+     * Animal
+     * @param name - Перегрузка конструктора
      */
-    public static void main(String[] args) {
-        Predator predator = new Predator();
+    public Animal(String name) {
+        this.name = name;
+
+        System.out.println("Animal");
+
     }
+
+
+
 }

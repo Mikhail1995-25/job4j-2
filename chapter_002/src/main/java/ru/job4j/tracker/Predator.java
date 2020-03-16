@@ -8,6 +8,7 @@ package ru.job4j.tracker;
  * @version 1
  */
 public class Predator extends Animal {
+
     /**
      * Constructor Predator
      *  Так же без параметров.
@@ -18,12 +19,14 @@ public class Predator extends Animal {
     }
 
     /**
-     * Main
-     *
-     * @param args - При вызове дочернего объекта в консоле будет результат родительского конструктора,
-     *             так как каждый конструктор вызывает конструктор родителя.
+     * Predator
+     * @param name - Принимает параметр, дочерний класс выводит результат на консоль.
      */
-    public static void main(String[] args) {
-        Tiger tiger = new Tiger();
+    public Predator(String name) {
+        super(name);
+        System.out.println("Predator");
+
     }
+
+
 }
