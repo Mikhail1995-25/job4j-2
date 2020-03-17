@@ -16,9 +16,9 @@ public class Reduce {
      * так как у нас поле и переменная одинаковые по имени, компилятор не понимает какой переменной передать значения.
      * Мы изменяем название поля и пробуем зановго запустить код, все работает.
      */
-    private int[] array1;
+    private int[] array;
     public void to(int[] array) {
-        array1 = array;
+        this.array = array;
     }
 
     /**
@@ -27,8 +27,8 @@ public class Reduce {
      * В этом методе находится цикл for, в теле цикла находится метод println, для выполнения результата на конслоь.
      */
     public void print() {
-        for (int index = 0; index < array1.length; index++) {
-            System.out.println(array1[index]);
+        for (int index = 0; index < array.length; index++) {
+            System.out.println(array[index]);
         }
     }
 
