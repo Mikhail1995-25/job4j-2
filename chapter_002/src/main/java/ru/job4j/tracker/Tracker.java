@@ -50,13 +50,29 @@ public class Tracker {
         return Arrays.copyOf(result, size);
     }
     public Item findById(String id) {
+       int index = indexOf(id);
+        return index != -1 ? items[index] : null;
+    }
+    public boolean replace(String id, Item item) {
+        boolean result = false;
         for (int index = 0; index < position; index++) {
-            Item item = items[index];
-            if (item.getId().equals(id)) {
-                return item;
+            if (items[index].getId().equals(id)) {
+                result = true;
+                item.setId(id);
+                items[index] = item;
+                break;
             }
         }
-
-        return null;
+        return result;
+    }
+    private int indexOf(String id) {
+        int rs1 = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                rs1 = index;
+                break;
+            }
+        }
+        return rs1;
     }
 }
