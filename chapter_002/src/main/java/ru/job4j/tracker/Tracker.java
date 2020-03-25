@@ -56,9 +56,12 @@ public class Tracker {
 
     public boolean replace(String id, Item item) {
       int i = indexOf(id);
-      items[i] = item;
-      items[i].setId(id);
-      return true;
+      boolean result = false;
+      if (i != -1) {
+          items[i].setName(item.getName());
+          result = true;
+      }
+      return result;
     }
 
     private int indexOf(String id) {
@@ -74,9 +77,13 @@ public class Tracker {
 
     public boolean delete(String id) {
         int i = indexOf(id);
-        System.arraycopy(items, i + 1, items, i, position - i);
-        items[position - 1 ] = null;
-        position--;
-        return true;
+        boolean result = false;
+        if (i != -1) {
+            System.arraycopy(items, i + 1, items, i, position - i);
+            items[position - 1] = null;
+            position--;
+            result = true;
+        }
+        return result;
     }
 }
