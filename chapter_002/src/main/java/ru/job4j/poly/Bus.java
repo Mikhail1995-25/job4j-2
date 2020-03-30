@@ -9,8 +9,7 @@ public class Bus implements Transport {
 
     @Override
     public void passenger(int number) {
-        int i = number;
-        System.out.println(i + " пассажиров отправляются");
+        System.out.println(number + " пассажиров отправляются");
     }
 
     @Override
