@@ -17,7 +17,7 @@ public class Matchers {
           } else {
               System.out.println("Вы ввели не то число");
           }
-          if (select == 1 || select != 2 || select == 3) {
+          if (answer % 2 == 0) {
               System.out.println("Первый игрок взял");
           } else {
               System.out.println("Второй игрок взял");
