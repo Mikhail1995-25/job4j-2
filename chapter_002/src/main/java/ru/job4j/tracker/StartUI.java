@@ -44,12 +44,18 @@ public class StartUI {
             } else if (select == 4) {
                 System.out.println("=== find item by id ===");
                 System.out.println("Enter id: ");
-                String id = scanner.nextLine();
-                tracker.findById(id);
+                String name = scanner.nextLine();
+                Item id = tracker.findById(name);
+                if (id != null) {
+                    System.out.println(id.getName() + " " + id.getId());
+                } else {
+                    System.out.println("Информации не найдено");
+                }
             } else if (select == 5) {
                 System.out.println("find items by name");
                 String name = scanner.nextLine();
-                tracker.findByName(name);
+                Item[] result = tracker.findByName(name);
+                    System.out.println(result);
             } else if (select == 6) {
                 run = false;
             }
