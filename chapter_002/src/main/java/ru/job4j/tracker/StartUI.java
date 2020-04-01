@@ -44,7 +44,7 @@ public class StartUI {
                 if (id != null) {
                     System.out.println(id.getName() + " " + id.getId());
                 } else {
-                    System.out.println("Информации не найдено");
+                    System.out.println("Информации не найдено.");
                 }
             } else if (select == 5) {
                 System.out.println("find items by name");
