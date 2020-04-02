@@ -37,7 +37,6 @@ public class StartUI {
         } else {
             System.out.println("Ошибка удаления.");
         }
-        tracker.delete(id);
     }
     public static void findByIdItem(Input input, Tracker tracker) {
         System.out.println("=== find item by id ===");
