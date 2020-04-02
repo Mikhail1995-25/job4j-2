@@ -8,7 +8,7 @@ public class StartUI {
         tracker.add(item);
     }
 
-    public static Item[] findAllItem( Tracker tracker) {
+    public static Item[] findAllItem(Tracker tracker) {
         System.out.println("=== All items ===");
         Item[] result = tracker.findAll();
         for (int index = 0; index < result.length; index++) {
