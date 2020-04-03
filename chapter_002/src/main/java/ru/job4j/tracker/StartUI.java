@@ -12,7 +12,7 @@ public class StartUI {
         System.out.println("=== All items ===");
         Item[] result = tracker.findAll();
         for (int index = 0; index < result.length; index++) {
-            System.out.println(result[index].getId() + " " + result[index].getName());
+            System.out.println(result[index]);
         }
         return result;
     }
@@ -43,7 +43,7 @@ public class StartUI {
         String name = input.askStr("Enter id: ");
         Item id = tracker.findById(name);
         if (id != null) {
-            System.out.println(id.getName() + " " + id.getId());
+            System.out.println(id);
         } else {
             System.out.println("Информации не найдено.");
         }
