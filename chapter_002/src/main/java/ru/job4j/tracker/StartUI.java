@@ -23,9 +23,9 @@ public class StartUI {
         String text = input.askStr(id);
         Item newItem = new Item(text);
         if (tracker.replace(id, newItem)) {
-            System.out.println("Замена произведена");
+            System.out.println("Замена произведена.");
             } else {
-            System.out.println("Ошибка");
+            System.out.println("Ошибка.");
         }
     }
 
