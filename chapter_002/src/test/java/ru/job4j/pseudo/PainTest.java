@@ -1,7 +1,10 @@
 package ru.job4j.pseudo;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import ru.job4j.stragery.Paint;
 import ru.job4j.stragery.Square;
+import ru.job4j.stragery.Triangle;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -15,32 +18,53 @@ import java.io.PrintStream;
  * @since 0.1
  */
 public class PainTest {
+    // Поле содержит дефолтный вывод на консоль.
+    private final PrintStream stdout = System.out;
+    //буфер для результата.
+    private final ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+    @Before
+    public void loadOutput() {
+        System.out.println("execute before method");
+        System.setOut(new PrintStream(this.out));
+    }
+
+    @After
+    public void backOutput() {
+        System.setOut(this.stdout);
+        System.out.println("execute after method");
+    }
 
     @Test
-    public void whenDrawSquare () {
-      //Получаем ссылку на стандартный вывод в консоль.
-      PrintStream stdout = System.out;
-      //Создаем буфер для хранения вывода.
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        //Заменяем стандартный вывод на вывод в память для тестирования.
-        System.setOut(new PrintStream(out));
-        //Выполняем действия пишущие в консоль.
+    public void whenDrawSquare() {
         new Paint().draw(new Square());
-        //Проверяем результат вычесления.
         assertThat(
-                new String(out.toByteArray()),
+                this.out.toString(),
                 is(
                         new StringJoiner(System.lineSeparator())
-                        .add("++++++")
-                        .add("+    +")
-                        .add("+    +")
-                        .add("++++++")
-                        .add(System.lineSeparator())
+                                .add("++++++")
+                                .add("+    +")
+                                .add("+    +")
+                                .add("++++++")
                         .toString()
                 )
         );
-        //Возвращаем обратно стандартный вывод на консоль.
-        System.setOut(stdout);
-
     }
+
+    @Test
+    public void whenDrawTriangle() {
+        new Paint().draw(new Triangle());
+        assertThat(
+                this.out.toString(),
+                is(
+                        new StringJoiner(System.lineSeparator())
+                        .add("   +   ")
+                        .add("  + +  ")
+                        .add(" +   + ")
+                        .add("+++++++")
+                        .toString()
+                )
+        );
+    }
+
 }
