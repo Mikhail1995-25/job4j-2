@@ -13,6 +13,7 @@ public class UserStore {
             User one = users[index];
             if (one.getUsername().equals(login)) {
                us = one;
+               break;
             }
         }
         if (us == null) {
