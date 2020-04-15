@@ -27,7 +27,7 @@ public class UserStore {
             throw new UserInvalidException("Not validate");
         }
         if (user.getUsername().length() < 3) {
-            throw new UserInvalidException("Not found");
+            throw new UserInvalidException("Username is less than 3 characters.");
         }
         return true;
     }
