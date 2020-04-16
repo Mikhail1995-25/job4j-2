@@ -32,7 +32,7 @@ public class ValidateInputTest {
         ValidateInput input = new ValidateInput(
                 new StubInput(new String[] {"one", "1"})
         );
-        input.askInt("Enter", 2);
+        input.askInt("4", 1);
         assertThat(
                 mem.toString(),
                 is(String.format("Please enter validate data again.%n"))
