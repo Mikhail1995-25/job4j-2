@@ -34,6 +34,7 @@ public class Tracker {
         Random rm = new Random();
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
     }
+
     public Item[] findAll() {
         return Arrays.copyOf(items, position);
     }
