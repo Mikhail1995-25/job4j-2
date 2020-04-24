@@ -34,7 +34,7 @@ public class Library {
          * С помощью цикла for выводим на консоль результат.
          */
 
-        for(int index = 0; index < books.length; index++) {
+        for (int index = 0; index < books.length; index++) {
             Book b = books[index];
             System.out.println(b.getName() + " - " + b.getPages());
         }
@@ -51,7 +51,7 @@ public class Library {
          * Вывести результат на консоль  спомощью цикла for.
          */
 
-        for(int index = 0; index < books.length; index++) {
+        for (int index = 0; index < books.length; index++) {
                 Book b = books[index];
                 System.out.println(b.getName() + " - " + b.getPages());
             }
@@ -60,9 +60,9 @@ public class Library {
          */
 
             System.out.println("Display the clean code book on the console");
-            for(int index = 0; index < books.length; index++) {
+            for (int index = 0; index < books.length; index++) {
                 Book b = books[index];
-                if(b.getPages() == 750) {
+                if (b.getPages() == 750) {
                     System.out.println(b.getName() + " - " + b.getPages());
                 }
             }

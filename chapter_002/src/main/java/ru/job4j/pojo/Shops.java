@@ -6,11 +6,11 @@ public class Shops {
                 products[i] = products[i + 1];
 
         }
-        products[products.length -1] = null;
+        products[products.length - 1] = null;
         return products;
     }
     public static void main(String[] args) {
-        Product products[] = new Product[5];
+        Product[] products = new Product[5];
         products[0] = new Product("Milk", 10);
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
@@ -49,7 +49,7 @@ public class Shops {
 
         }
         System.out.println();
-        Product products2[] = new Product[5];
+        Product[] products2 = new Product[5];
         products2[1] = new Product("Milk", 10);
         products2[2] = new Product("Bread", 4);
         products2[3] = new Product("Egg", 19);

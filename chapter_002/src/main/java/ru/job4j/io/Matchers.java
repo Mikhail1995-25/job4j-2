@@ -7,8 +7,7 @@ public class Matchers {
       int answer = 11;
       while (run) {
           System.out.println("Игра 11");
-          System.out.println("В этой игре учавствуют два игрока, им нужно брать спички со стола от 1 - 3 штук " +
-                  " кто последний вытащит тот победитель.");
+          System.out.println("В этой игре учавствуют два игрока, им нужно брать спички со стола от 1 - 3 штук " + " кто последний вытащит тот победитель.");
           System.out.println("Начать: ");
           int select = Integer.valueOf(scan.nextLine());
           if (select > 0 && select < 4) {
@@ -25,7 +24,7 @@ public class Matchers {
           if (answer == 0) {
               System.out.println("Первый игрок победил");
               run = false;
-              } else if (answer < 0){
+              } else if (answer < 0) {
               System.out.println("Второй игрок победил");
               run = false;
           }

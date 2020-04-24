@@ -5,7 +5,7 @@ public class GameDeveloper extends Engineer {
     private String tongue;
 
     public String getGta() {
-        return this.gta = gta;
+        return this.gta;
     }
     public void setTongue(Programming java) {
 

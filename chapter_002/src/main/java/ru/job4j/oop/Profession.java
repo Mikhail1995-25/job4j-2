@@ -7,15 +7,15 @@ public class Profession {
     private String birthday;
 
     public String getName() {
-       return this.name = name;
+       return this.name;
     }
     public String getSurname() {
-        return this.surname = surname;
+        return this.surname;
     }
     public String getEducation() {
-        return this.education = education;
+        return this.education;
     }
     public String getBirthday() {
-        return this.birthday = birthday;
+        return this.birthday;
     }
 }

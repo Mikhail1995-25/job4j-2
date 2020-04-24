@@ -5,7 +5,7 @@ public class Surgeon {
     private int  quantity;
 
     public String getTime() {
-        return this.time = time;
+        return this.time;
     }
     public int getQuantity(Oculist pacient) {
         return this.quantity;

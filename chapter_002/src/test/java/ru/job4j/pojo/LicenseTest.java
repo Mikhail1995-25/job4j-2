@@ -10,7 +10,7 @@ public class LicenseTest {
         first.setCode("audio");
         License second = new License();
         second.setCode("audio");
-        assertThat(first,is(second));
+        assertThat(first, is(second));
     }
 
 }

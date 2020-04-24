@@ -22,8 +22,7 @@ public class College {
         student.setGroup("intern");
         student.setDate("29.01.2020");
         student.setCreated(new Date());
-        System.out.println(student.getSurname() + " " + student.getName() + " " + student.getPatronymic() +
-                " studying at the stage "
+        System.out.println(student.getSurname() + " " + student.getName() + " " + student.getPatronymic() + " studying at the stage "
                 + student.getGroup() + " receipt date " + student.getDate());
     }
 }
