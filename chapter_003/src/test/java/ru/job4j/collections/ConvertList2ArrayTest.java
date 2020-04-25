@@ -8,11 +8,9 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
-
+@Ignore
 public class ConvertList2ArrayTest {
 
-    @Ignore
-    public class convertList2Array {
         @Test
         public void when7ElementsThen9() {
             ConvertList2Array list = new ConvertList2Array();
@@ -29,4 +27,4 @@ public class ConvertList2ArrayTest {
         }
     }
 
-}
+
