@@ -10,9 +10,9 @@ public class PhoneDictionary {
     }
 
     /**
-     * Вернуть список всех пользователей, который содержит key во всех полях.
-     * @param key ключ поиска.
-     * @return Список подошедших пользователей.
+     * Вернуть список всех пользователей, который содержат key в любых полях.
+     * @param key Ключ поиска.
+     * @return Список подощедщих пользователей.
      */
     public ArrayList<Person> find(String key) {
         ArrayList<Person> result = new ArrayList<>();
@@ -20,11 +20,10 @@ public class PhoneDictionary {
             if (person.getName().contains(key) ||
             person.getSurname().contains(key) ||
             person.getPhone().contains(key) ||
-            person.getAddress().contains(key))
+            person.getAddress().contains(key)) {
                 result.add(person);
-
             }
-
+        }
         return result;
     }
 }
