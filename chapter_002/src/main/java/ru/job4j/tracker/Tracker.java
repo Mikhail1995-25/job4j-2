@@ -1,18 +1,17 @@
 package ru.job4j.tracker;
 
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Random;
+import java.util.*;
 
 public class Tracker {
     /**
      * Мфссив для хранения заявок.
      */
-    private final Item[] items = new Item[100];
+    private final ArrayList<Item> items = new ArrayList<>();
+
     /**
      * Указатель ячейки для новой заявки.
      */
-    private int position = 0;
+   // private int position = 0;
 
     /**
      * Метод добавления заявки  в хранилище.
@@ -21,7 +20,7 @@ public class Tracker {
      */
     public Item add(Item item) {
         item.setId(generateId());
-        items[position++] = item;
+        items.add(item);
         return item;
     }
 
@@ -35,24 +34,23 @@ public class Tracker {
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
     }
 
-    public Item[] findAll() {
-        return Arrays.copyOf(items, position);
+    public List<Item> findAll() {
+        return items;
     }
 
-    public Item[] findByName(String key) {
-        int size = 0;
-        Item[] result = new Item[position];
-        for (int index = 0; index < position; index++) {
-            if (items[index].getName().equals(key)) {
-                result[size++] = items[index];
+    public ArrayList<Item> findByName(String key) {
+        ArrayList<Item> list = new ArrayList<>();
+        for (Item row : list) {
+            if (row.getName().equals(key)) {
+                list.add(row);
             }
         }
-        return Arrays.copyOf(result, size);
+        return list;
     }
 
     public Item findById(String id) {
        int index = indexOf(id);
-        return index != -1 ? items[index] : null;
+        return index != -1 ? items.get(index) : null;
     }
 
     public boolean replace(String id, Item item) {
@@ -60,15 +58,15 @@ public class Tracker {
       boolean rs1 = index != -1;
       if (rs1) {
           item.setId(id);
-          items[index] = item;
+          items.get(index);
       }
       return rs1;
     }
 
     private int indexOf(String id) {
         int rs1 = -1;
-        for (int index = 0; index < position; index++) {
-            if (items[index].getId().equals(id)) {
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId().equals(id)) {
                 rs1 = index;
                 break;
             }
@@ -78,12 +76,11 @@ public class Tracker {
 
     public boolean delete(String id) {
         int index = indexOf(id);
-        boolean result = index != -1;
-        if (result) {
-            System.arraycopy(items, index + 1, items, index, position - index);
-            items[position - 1] = null;
-            position--;
+        if (index >= 0) {
+            items.remove(index);
+            return true;
+        } else {
+            return false;
         }
-        return result;
     }
 }
