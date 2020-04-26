@@ -19,8 +19,6 @@ public class UniqueText {
                break;
             }
         }
-
-
         return rs1;
     }
 }
