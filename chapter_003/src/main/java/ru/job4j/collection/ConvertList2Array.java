@@ -21,7 +21,7 @@ public class ConvertList2Array {
         int[][] rs1 = toArray(list, 3);
         for (int[] row : rs1) {
             for (int cell : row) {
-               System.out.println(cell + " ");
+               System.out.print(cell + " ");
             }
             System.out.println();
         }
