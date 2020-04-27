@@ -14,15 +14,15 @@ public class PriorityQueue {
     public void put(Task task) {
         int index = 0;
         for (Task element : tasks) {
-            if (task.getPriority() > element.getPriority()) {
-                task.getPriority();
+            if (task.getPriority() >= element.getPriority()) {
                 index++;
+                break;
             }
         }
         this.tasks.add(index, task);
     }
 
     public Task take() {
-        return tasks.remove(1);
+        return tasks.poll();
     }
 }
