@@ -1,5 +1,4 @@
 package ru.job4j.search;
-
 import java.util.LinkedList;
 
 public class PriorityQueue {
