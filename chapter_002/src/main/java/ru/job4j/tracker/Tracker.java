@@ -6,12 +6,8 @@ public class Tracker {
     /**
      * Мфссив для хранения заявок.
      */
-    private final ArrayList<Item> items = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
 
-    /**
-     * Указатель ячейки для новой заявки.
-     */
-   // private int position = 0;
 
     /**
      * Метод добавления заявки  в хранилище.
@@ -58,7 +54,7 @@ public class Tracker {
       boolean rs1 = index != -1;
       if (rs1) {
           item.setId(id);
-          items.get(index);
+          items.set(index, item);
       }
       return rs1;
     }
