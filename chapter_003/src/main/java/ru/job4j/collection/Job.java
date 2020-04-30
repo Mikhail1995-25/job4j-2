@@ -9,6 +9,7 @@ public class Job implements Comparable<Job> {
         this.priority = priority;
     }
 
+
     public String getName() {
         return name;
     }
