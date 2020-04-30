@@ -26,6 +26,8 @@ public class StartUI {
         Input validate = new ValidateInput(input);
         Tracker tracker = new Tracker();
         List<UserAction> actions = new ArrayList<UserAction>();
+        new SortNameAscending();
+        new SortNameDescending();
         new StartUI().init(validate, tracker, actions);
 
     }

@@ -79,4 +79,12 @@ public class Tracker {
             return false;
         }
     }
+
+    public void sortNameAscending() {
+        Collections.sort(items, new SortNameAscending());
+    }
+
+    public void sortNameDescending() {
+        Collections.sort(items, new SortNameDescending());
+    }
 }
