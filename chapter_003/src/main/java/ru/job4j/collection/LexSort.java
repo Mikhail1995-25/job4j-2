@@ -4,7 +4,6 @@ import java.util.Comparator;
 
 public class LexSort implements Comparator<String> {
 
-
     @Override
     public int compare(String left, String right) {
       if (left.length() > right.length()) {
