@@ -22,11 +22,11 @@ public class PhoneDictionaryTest {
         PhoneDictionary phone = new PhoneDictionary();
         phone.add(new Person("Mikhail", "Pushkarev", "54321", "Nigniy Novgorod"));
         ArrayList<Person> persons = phone.find("54321");
-        assertThat(persons.get(0).getAddress(), is ("Nigniy Novgorod"));
+        assertThat(persons.get(0).getAddress(), is("Nigniy Novgorod"));
     }
 
     @Test
-    public void whenFindPhone () {
+    public void whenFindPhone() {
         PhoneDictionary phone = new PhoneDictionary();
         phone.add(new Person("Mikhail", "Pushkarev", "654321", "Nigniy Novgorod"));
         ArrayList<Person> persons = phone.find("od");

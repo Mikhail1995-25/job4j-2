@@ -1,6 +1,5 @@
 package ru.job4j.collection;
 
-import java.io.PrintStream;
 import java.util.HashSet;
 
 public class UseHashSet {

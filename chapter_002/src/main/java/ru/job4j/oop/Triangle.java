@@ -1,7 +1,7 @@
 package ru.job4j.oop;
 
 
-import ru.job4j.condition.Point;
+import ru.job4j.conditionTest.Point;
 
 /**
  * Triangle
