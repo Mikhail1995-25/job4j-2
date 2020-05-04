@@ -29,4 +29,23 @@ public class UserTest {
                 );
         assertThat(rs1, greaterThan(0));
     }
+
+    @Test
+    public void whenASC() {
+        Set<User> user = new TreeSet<>();
+        user.add(new User("Mikhail", 38));
+        user.add(new User("Mikhail", 25));
+        Iterator<User> it = user.iterator();
+        assertThat(it.next(), is(new User("Mikhail", 25)));
+        assertThat(it.next(), is(new User("Mikhail", 38)));
+    }
+
+    @Test
+    public void CompareMikhailVsMikhail() {
+        int rs1 = new User("Mikhail", 38)
+                .compareTo(
+                        new User("Mikhail", 25)
+                );
+        assertThat(rs1, greaterThan(0));
+    }
 }
