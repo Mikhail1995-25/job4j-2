@@ -62,10 +62,10 @@ public class JobTest {
 
     @Test
     public void whenJobDescendingPriority() {
-        Comparator<Job> jobs = new JobAscByPriority();
+        Comparator<Job> jobs = new JobDescByPriority();
         int rs1 = jobs.compare(
-                new Job("X task", 0),
-                new Job("Fix bug", 1)
+                new Job("X task", 1),
+                new Job("Fix bug", 0)
         );
         assertThat(rs1, lessThan(0));
     }
