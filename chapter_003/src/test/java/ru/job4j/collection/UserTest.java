@@ -11,24 +11,24 @@ import static org.hamcrest.core.Is.is;
 
 public class UserTest {
 
-    @Test
-    public void whenAsc() {
-        Set<User> user = new TreeSet<>();
-        user.add(new User("Mikhail", 24));
-        user.add(new User("Vlad", 20));
-        Iterator<User> it = user.iterator();
-        assertThat(it.next(), is(new User("Vlad", 20)));
-        assertThat(it.next(), is(new User("Mikhail", 24)));
-    }
+   // @Test
+   // public void whenAsc() {
+      //  Set<User> user = new TreeSet<>();
+      //  user.add(new User("Mikhail", 24));
+       // user.add(new User("Vlad", 20));
+       // Iterator<User> it = user.iterator();
+       // assertThat(it.next(), is(new User("Vlad", 20)));
+       // assertThat(it.next(), is(new User("Mikhail", 24)));
+    //}
 
-    @Test
-    public void whenCompareMikhailVsVlad() {
-        int rs1 = new User("Mikhail", 24)
-                .compareTo(
-                        new User("Vlad", 20)
-                );
-        assertThat(rs1, greaterThan(0));
-    }
+    //@Test
+   // public void whenCompareMikhailVsVlad() {
+      //  int rs1 = new User("Mikhail", 24)
+               // .compareTo(
+                       // new User("Vlad", 20)
+               // );
+        //assertThat(rs1, greaterThan(0));
+    //}
 
     @Test
     public void whenASC() {
@@ -41,7 +41,7 @@ public class UserTest {
     }
 
     @Test
-    public void CompareMikhailVsMikhail() {
+    public void whenCompareMikhail() {
         int rs1 = new User("Mikhail", 38)
                 .compareTo(
                         new User("Mikhail", 25)
