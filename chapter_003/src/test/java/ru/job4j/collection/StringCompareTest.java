@@ -67,4 +67,24 @@ public class StringCompareTest {
         );
         assertThat(rs1, lessThan(0));
     }
+
+    @Test
+    public void whenSecondCharOfLeftLessThenRightNegative() {
+        StringCompare compare = new StringCompare();
+        int rs1 = compare.compare(
+                "Ivanova",
+                "Ivanov"
+        );
+        assertThat(rs1, greaterThan(0));
+    }
+
+    @Test
+    public void whenFirstCharOfLeftLessNegative() {
+        StringCompare compare = new StringCompare();
+        int rs1 = compare.compare(
+                "Petrov",
+                ""
+        );
+        assertThat(rs1, greaterThan(0));
+    }
 }
