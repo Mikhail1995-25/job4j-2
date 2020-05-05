@@ -1,7 +1,7 @@
 # используем язык java. Travis CI поддерживает другие языки тоже.
 language: java
 jdk:
-  - openjdk13
+  - openjdk13.0.2
 
 # используем режим обычного пользователя для сборки проекта.
 sudo: false
@@ -23,4 +23,6 @@ after_success:
       global:
         - CODECOV_TOKEN="6031e5e8-3cde-4af7-a97d-45cfa919c0d7"
 
-
+  mvn install:
+   -DskipTests=true
+   -Dmaven.javadoc.skip=true -B -V
