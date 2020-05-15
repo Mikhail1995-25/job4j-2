@@ -27,7 +27,7 @@ public class SchoolTest {
                 new Student(20, "Oleshin"),
                 new Student(60, "Kozlov")
         );
-        List<Student> second = School.collect(list, student -> student.getScore() >= 50 && student.getScore() <= 70);
+        List<Student> second = School.collect(list, student -> student.getScore() >= 50 && student.getScore() < 70);
         List<Student> list1 = List.of(new Student(50, "Vasichkin"), new Student(60, "Kozlov"));
         assertThat(second.toString(), is(list1.toString()));
     }
@@ -39,7 +39,7 @@ public class SchoolTest {
                 new Student(30, "Pupkin"),
                 new Student(100, "Kashin")
         );
-        List<Student> third = School.collect(list, student -> student.getScore() >= 0 && student.getScore() <= 50);
+        List<Student> third = School.collect(list, student -> student.getScore() >= 0 && student.getScore() < 50);
         List<Student> list1 = List.of(new Student(15, "Smirnov"), new Student(30, "Pupkin"));
         assertThat(third.toString(), is(list1.toString()));
     }
