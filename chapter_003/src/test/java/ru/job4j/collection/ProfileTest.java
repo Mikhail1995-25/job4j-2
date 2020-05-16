@@ -18,4 +18,21 @@ public class ProfileTest {
         );
         assertThat(Profile.collect(list).toString(), is(expected.toString()));
     }
+
+    @Test
+    public void whenSortedCity() {
+        List<Address> list = List.of(
+                new Address("Нижний Новгород", "Адмирала Макарова", 45, 20),
+                new Address("Москва", "Лебедева", 45, 5),
+                new Address("Чебоксары", "Новопокровская", 10, 19)
+        );
+        List<Address> result = Profile.collector(list);
+        List<Address> expected = List.of(
+                new Address("Москва", "Лебедева", 45, 5),
+                new Address("Нижний Новгород", "Адмирала Макарова", 45, 20),
+                new Address("Чебоксары", "Новопокровская", 10, 19)
+        );
+
+        assertThat(result.toString(), is(expected.toString()));
+    }
 }
