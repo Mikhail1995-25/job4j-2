@@ -11,7 +11,7 @@ public class Profiles {
     }
 
     public static List<Address> collector(List<Address> profile) {
-        Comparator<Address> list = (left, right) -> left.getCity().compareTo(right.getCity());
+        Comparator<Address> list = Comparator.comparing(Address::getCity);
 
         return profile.stream().distinct().sorted(list).collect(Collectors.toList());
     }
