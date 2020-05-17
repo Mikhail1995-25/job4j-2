@@ -3,12 +3,12 @@ package ru.job4j.collection;
 import javax.lang.model.util.Types;
 
 public class Student {
-    private int score;
     private String surname;
+    private int score;
 
-    public Student(int score, String surname) {
-        this.score = score;
+    public Student(String surname, int score) {
         this.surname = surname;
+        this.score = score;
     }
 
     public int getScore() {

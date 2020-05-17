@@ -10,11 +10,11 @@ public class School {
         return students.stream().filter(predict).distinct().collect(Collectors.toList());
     }
 
-    public static Map<Student, String> collector(List<Student> students) {
+    public static Map<String, Student> collector(List<Student> students) {
         return students.stream().distinct().collect(
                 Collectors.toMap(
-                        student -> student,
-                        Student::getSurname
+                        Student::getSurname,
+                        student -> student
                 )
         );
     }
