@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class School {
 
@@ -17,5 +18,13 @@ public class School {
                         student -> student
                 )
         );
+    }
+
+    public static List<Student> levelOf(List<Student> students, int bounds) {
+        return students.stream()
+                .flatMap(Stream::ofNullable)
+                .sorted()
+                .takeWhile(v -> v.getScore() > bounds)
+                .collect(Collectors.toList());
     }
 }

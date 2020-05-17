@@ -1,10 +1,7 @@
 package ru.job4j.collection;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -76,5 +73,24 @@ public class SchoolTest {
 
       assertThat(map, is(expected));
 
+    }
+
+    @Test
+    public void whenScoreEqualsBoundsResult() {
+        List<Student> list = new ArrayList<>();
+        list.add(new Student("Pupkin", 50));
+        list.add(new Student("Sokolov", 10));
+        list.add(null);
+        list.add(new Student("Vasichkin", 70));
+        list.add(null);
+
+        List<Student> result = School.levelOf(list, 15);
+
+        List<Student> expected = List.of(
+                new Student("Vasichkin", 70),
+                new Student("Pupkin", 50)
+        );
+
+        assertThat(result.toString(), is(expected.toString()));
     }
 }
