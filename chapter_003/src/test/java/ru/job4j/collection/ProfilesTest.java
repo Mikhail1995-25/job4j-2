@@ -5,7 +5,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
-public class ProfileTest {
+public class ProfilesTest {
 
     @Test
     public void whenAddressResult() {
@@ -16,7 +16,7 @@ public class ProfileTest {
         List<Address> expected = List.of(new Address("Нижний Новгород", "Адмирала Макарова", 45, 20),
                                          new Address("Москва", "Лебедева", 45, 5)
         );
-        assertThat(Profile.collect(list).toString(), is(expected.toString()));
+        assertThat(Profiles.collect(list).toString(), is(expected.toString()));
     }
 
     @Test
@@ -26,7 +26,7 @@ public class ProfileTest {
                 new Address("Москва", "Лебедева", 45, 5),
                 new Address("Чебоксары", "Новопокровская", 10, 19)
         );
-        List<Address> result = Profile.collector(list);
+        List<Address> result = Profiles.collector(list);
         List<Address> expected = List.of(
                 new Address("Москва", "Лебедева", 45, 5),
                 new Address("Нижний Новгород", "Адмирала Макарова", 45, 20),
