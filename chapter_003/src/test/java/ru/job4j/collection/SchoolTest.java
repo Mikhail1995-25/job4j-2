@@ -84,13 +84,13 @@ public class SchoolTest {
         list.add(new Student("Vasichkin", 70));
         list.add(null);
 
-        List<Student> result = School.levelOf(list, 15);
+        //List<Student> result = School.levelOf(list, 15);
 
         List<Student> expected = List.of(
                 new Student("Vasichkin", 70),
                 new Student("Pupkin", 50)
         );
 
-        assertThat(result.toString(), is(expected.toString()));
+        assertThat(School.levelOf(list, 15).toString(), is(expected.toString()));
     }
 }
