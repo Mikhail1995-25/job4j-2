@@ -12,7 +12,7 @@ public class School {
     }
 
     public static Map<String, Student> collector(List<Student> students) {
-        return students.stream().distinct().collect(
+        return students.stream().collect(
                 Collectors.toMap(
                         Student::getSurname,
                         student -> student
