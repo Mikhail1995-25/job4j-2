@@ -24,33 +24,21 @@ public class BankService {
     }
 
     public Optional<User> findByPassport(String passport) {
-        //User user = null;
-        //for (User key : users.keySet()) {
-            //if (key.getPassport().equals(passport)) {
-               // user = key;
-                //break;
-           // }
-        //}
-        //return user;
-        //User user = this.users.keySet().stream().filter(user1 -> user1.getPassport().equals(passport)).findFirst().orElse(null);
-        return users.keySet().stream().filter(user -> user.getPassport().equals(passport)).findFirst();
+        return users.keySet()
+                .stream()
+                .filter(user -> user
+                .getPassport()
+                .equals(passport))
+                .findFirst();
     }
 
     public Optional<Account> findByRequisite(String passport, String requisite) {
        var user = findByPassport(passport);
-         //Account account = null;
-         //if (user.isPresent()) {
-            return  user.isPresent() ?  users.get(user).stream().filter(e -> e.getRequisite().equals(requisite)).findFirst() : Optional.empty();
-             //Account account = users.get(user).stream().filter(e -> e.getRequisite().equals(requisite)).findFirst().orElse(null);
-             //  for (Account account1 : list) {
-             //  if (account1.getRequisite().equals(requisite)) {
-             //   account = account1;
-             //   break;
-             // }
-             //}
-             //return account;
-         //}
-        // return null;
+            return  user.isPresent() ?  users.get(user)
+                    .stream()
+                    .filter(e -> e.getRequisite()
+                    .equals(requisite))
+                    .findFirst() : Optional.empty();
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite, String destPassport,
